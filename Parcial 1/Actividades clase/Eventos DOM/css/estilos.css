@@ -1,0 +1,10 @@
+ #cuadro {
+      width: 150px;
+      height: 150px;
+      background-color: pink;
+      margin: 50px auto;
+      text-align: center;
+      line-height: 150px;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
