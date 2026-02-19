@@ -1,0 +1,94 @@
+* {
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+.encabezado {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffb6c1;
+}
+.navegacion {
+    background-color: #ffc0cb;
+    padding: 15px;
+}
+.nav {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+/* Transformación */
+.nav a:hover {
+    transform: scale(1.1);
+}
+section{
+    
+    height: 100vh;
+    background-color: #f8b0bb;
+    margin-top: 20px;
+}
+h1 h2{
+    color: white;
+}
+
+/* GRID */
+.galeria {
+     display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    gap: 20px; /* espacio entre tarjetas */
+    padding: 20px;
+}
+
+.imagen-contenedor {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.imagen-contenedor img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* recorta sin deformar */
+}
+.card {
+    background-color: #e08fa0;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+}
+
+
+/* BARRA ROSA */
+.card-info {
+    background-color: #d98c99;
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+}
+
+
+.card-info h3 {
+    margin: 0;
+    color: white;
+}
+
+/* EFECTO HOVER */
+.card:hover {
+    transform: scale(1.05);
+    z-index: 2;
+}
