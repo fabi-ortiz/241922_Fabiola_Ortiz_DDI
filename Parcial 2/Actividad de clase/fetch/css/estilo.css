@@ -1,0 +1,22 @@
+#contenedor{
+    display: grid;
+    flex-wrap: wrap; /*Sirve para que los elementos se bajen a la siguiente linea*/
+     grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.card{
+   background: radial-gradient(circle, #ffcc00, #ff6600);
+    width: 180px;
+    padding: 10px;
+    border: 1px solid #161515;
+    border-radius: 10px;
+   transition: transform 0.3s ease;
+    text-align: center;
+}
+
+
+.card:hover {
+    transform: scale(1.05);
+}
