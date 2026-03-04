@@ -1,41 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Login y Registro</title>
     <link rel="stylesheet" href="css/estilo.css">
 </head>
+
 <body>
-<div class="container">
+    <div class="container">
 
-<h2>Iniciar Sesión</h2>
+        <h2>Iniciar Sesión</h2>
 
-<form id="loginForm">
-    <input type="email" name="correo" placeholder="Correo"><br><br>
-    <input type="password" name="contrasena" placeholder="Contraseña"><br><br>
-    <button type="submit">Iniciar Sesión</button>
-</form>
+        <form id="loginForm">
+            <input type="email" name="correo" placeholder="Correo"><br><br>
+            <input type="password" name="contrasena" placeholder="Contraseña"><br><br>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
 
-<p>¿No tienes cuenta? <button id="irRegistro">Registrarse</button></p>
+        <p>¿No tienes cuenta? <button id="irRegistro">Registrarse</button></p>
 
-<hr>
+        <hr>
 
-<div id="registroDiv" >
-    <h2>Registro</h2>
+        <div id="registroDiv">
+            <h2>Registro</h2>
 
-    <form id="registroForm">
-        <input type="text" name="nombre" placeholder="Nombre"><br><br>
-        <input type="text" name="apellido" placeholder="Apellido"><br><br>
-        <input type="email" name="correo" placeholder="Correo"><br><br>
-        <input type="password" name="contrasena" placeholder="Contraseña"><br><br>
-        <input type="password" name="confirmar" placeholder="Confirmar Contraseña"><br><br>
-        <button type="submit">Registrarse</button>
-    </form>
+            <form id="registroForm">
+                <input type="text" name="nombre" placeholder="Nombre"><br><br>
+                <input type="text" name="apellido" placeholder="Apellido"><br><br>
+                <input type="email" name="correo" placeholder="Correo"><br><br>
+                <input type="password" name="contrasena" placeholder="Contraseña"><br><br>
+                <input type="password" name="confirmar" placeholder="Confirmar Contraseña"><br><br>
+                <button type="submit">Registrarse</button>
+            </form>
 
-    <button id="volverLogin">Volver a iniciar sesión</button>
-</div>
-</div>
+            <button id="volverLogin">Volver a iniciar sesión</button>
+        </div>
 
-<script src="js/script.js"></script>
+        <div id="apiSection" class="oculto">
+            <h2>Perrito sorpresa 🐶</h2>
+            <button id="nuevoPerro">Ver otro perrito</button>
+            <div id="apiData"></div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
+
 </html>

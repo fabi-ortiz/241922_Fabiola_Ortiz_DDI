@@ -80,3 +80,13 @@ hr {
 .oculto {
     display: none;
 }
+.oculto{
+    display:none;
+}
+
+#apiData img{
+    margin-top:15px;
+    width:300px;
+    border-radius:15px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}

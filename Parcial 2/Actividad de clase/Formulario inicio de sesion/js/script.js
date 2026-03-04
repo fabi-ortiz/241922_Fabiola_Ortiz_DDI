@@ -80,8 +80,32 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
 
     if (usuarioEncontrado) {
         alert("Sesión iniciada de forma correcta");
+
+    document.getElementById("apiSection").classList.remove("oculto");
+
+    obtenerPerro();
     } else {
         alert("Correo o contraseña incorrectos");
     }
 
+});
+function obtenerPerro(){
+
+    fetch("https://dog.ceo/api/breeds/image/random")
+        .then(response => response.json())
+        .then(data => {
+
+            const apiData = document.getElementById("apiData");
+
+            apiData.innerHTML = `
+                <img src="${data.message}" alt="Perrito adorable">
+            `;
+
+        })
+        .catch(error => {
+            console.log("Error:", error);
+        });
+} 
+document.getElementById("nuevoPerro").addEventListener("click", function(){
+    obtenerPerro();
 });
