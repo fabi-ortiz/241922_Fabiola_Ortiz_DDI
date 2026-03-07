@@ -1,7 +1,10 @@
 // Arreglo donde se guardan los usuarios
-let usuarios = [];
+//recuperar los usuarios guardados en localStorage
+let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
-document.addEventListener("DOMContentLoaded", function() {
+
+
+document.addEventListener("DOMContentLoaded", function () {
 
     const registroDiv = document.querySelector("#registroDiv");
     const btnRegistro = document.querySelector("#irRegistro");
@@ -11,19 +14,21 @@ document.addEventListener("DOMContentLoaded", function() {
     registroDiv.classList.add("oculto");
 
     // Mostrar registro
-    btnRegistro.addEventListener("click", function() {
+    btnRegistro.addEventListener("click", function () {
         registroDiv.classList.remove("oculto");
     });
 
     // Volver a login
-    btnVolver.addEventListener("click", function() {
+    btnVolver.addEventListener("click", function () {
         registroDiv.classList.add("oculto");
     });
 
 });
 
+
 // REGISTRO
-document.getElementById("registroForm").addEventListener("submit", function(e) {
+document.getElementById("registroForm").addEventListener("submit", function (e) {
+
     e.preventDefault();
 
     let datos = new FormData(this);
@@ -34,19 +39,16 @@ document.getElementById("registroForm").addEventListener("submit", function(e) {
     let contrasena = datos.get("contrasena");
     let confirmar = datos.get("confirmar");
 
-    // Validar campos vacíos
     if (!nombre || !apellido || !correo || !contrasena || !confirmar) {
         alert("Todos los campos son obligatorios");
         return;
     }
 
-    // Validar contraseña
     if (contrasena !== confirmar) {
         alert("Las contraseñas no coinciden");
         return;
     }
 
-    // Guardar usuario en arreglo
     usuarios.push({
         nombre: nombre,
         apellido: apellido,
@@ -54,13 +56,18 @@ document.getElementById("registroForm").addEventListener("submit", function(e) {
         contrasena: contrasena
     });
 
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
     alert("Usuario registrado correctamente");
 
     document.getElementById("registroForm").reset();
+
 });
 
+
 // LOGIN
-document.getElementById("loginForm").addEventListener("submit", function(e) {
+document.getElementById("loginForm").addEventListener("submit", function (e) {
+
     e.preventDefault();
 
     let datos = new FormData(this);
@@ -73,39 +80,100 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
         return;
     }
 
-    // Buscar usuario
-    let usuarioEncontrado = usuarios.find(u => 
+    let usuarioEncontrado = usuarios.find(u =>
         u.correo === correo && u.contrasena === contrasena
     );
 
     if (usuarioEncontrado) {
+
         alert("Sesión iniciada de forma correcta");
 
-    document.getElementById("apiSection").classList.remove("oculto");
+        localStorage.setItem("sesionActiva", "true");
+        localStorage.setItem("usuario", usuarioEncontrado.nombre);
 
-    obtenerPerro();
+        mostrarInicio();
+
     } else {
+
         alert("Correo o contraseña incorrectos");
+
     }
 
 });
-function obtenerPerro(){
 
-    fetch("https://dog.ceo/api/breeds/image/random")
-        .then(response => response.json())
+
+// MOSTRAR INICIO
+function mostrarInicio() {
+
+document.querySelector(".container").classList.add("oculto");
+document.getElementById("inicio").classList.remove("oculto");
+
+    obtenerPerritos();
+
+}
+
+
+// API DE PERRITOS
+function obtenerPerritos() {
+
+    fetch("https://dog.ceo/api/breeds/image/random/12")
+        .then(res => res.json())
         .then(data => {
 
-            const apiData = document.getElementById("apiData");
+            const contenedor = document.getElementById("contenedorTarjetas");
+            contenedor.innerHTML = "";
 
-            apiData.innerHTML = `
-                <img src="${data.message}" alt="Perrito adorable">
+            data.message.forEach(perro => {
+
+                const tarjeta = document.createElement("div");
+                tarjeta.classList.add("tarjeta");
+
+                tarjeta.innerHTML = `
+                <img src="${perro}" width="200">
+                <p>Perrito feliz </p>
             `;
 
-        })
-        .catch(error => {
-            console.log("Error:", error);
+                contenedor.appendChild(tarjeta);
+
+            });
+
         });
-} 
-document.getElementById("nuevoPerro").addEventListener("click", function(){
-    obtenerPerro();
+
+}
+
+
+// CERRAR SESIÓN
+document.addEventListener("click", function (e) {
+
+    if (e.target.id === "cerrarSesion") {
+        localStorage.removeItem("sesionActiva");
+        location.reload();
+    }
+
 });
+
+
+// VERIFICAR SESIÓN AL CARGAR
+window.addEventListener("load", function () {
+
+    if (localStorage.getItem("sesionActiva") === "true") {
+        mostrarInicio();
+    }
+
+});
+
+
+// OBSERVER
+const contenedor = document.getElementById("contenedorTarjetas");
+
+if (contenedor) {
+
+    const observer = new MutationObserver(function () {
+        console.log("Se agregaron tarjetas al DOM");
+    });
+
+    observer.observe(contenedor, {
+        childList: true
+    });
+
+}
