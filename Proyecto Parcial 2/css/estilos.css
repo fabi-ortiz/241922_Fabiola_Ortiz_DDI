@@ -1,0 +1,192 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #2c2c54);
+    margin: 0;
+    color: white;
+}
+
+.container {
+    width: 350px;
+    margin: 50px auto;
+    background: #2f3640;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+input, button {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 8px;
+}
+
+input {
+    background: #dcdde1;
+}
+
+button {
+    background: #00a8ff;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0097e6;
+}
+
+.inicio-app {
+    padding: 20px;
+}
+
+#contenedorTarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tarjeta {
+    background: #2a2a3d;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.tarjeta:hover {
+    transform: scale(1.05);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tarjeta h3 {
+    margin: 10px;
+    font-size: 16px;
+}
+
+.tarjeta p {
+    margin: 0 10px 10px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.oculto {
+    display: none;
+}
+
+*#cerrarSesion {
+ 
+    width: auto;
+    padding: 10px 15px;
+    background: #e84118;
+}
+/* HEADER */
+.header {
+     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1e1e2f;
+    padding: 15px 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.logo{
+   font-size: 30px;
+    font-weight: bold;
+   text-align: center;
+}
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.foto {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-info button {
+    background: #00bcd4;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* CONTENIDO */
+.contenido {
+    padding: 30px 40px;
+}
+.subtitulo {
+    margin-bottom: 20px;
+}
+
+/*  GRID DE PELÍCULAS */
+#contenedorTarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 25px;
+}
+.perfil {
+    background: #2f3640;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 180px;
+    height: 250px;
+}
+
+.perfil img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.admin-panel {
+    gap: 40px;
+    align-items: flex-start;
+    gap: 40px;
+    align-items: flex-start;
+    width: 200px;
+}
+
+.admin-subida {
+    background: #1e1e2f;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+}
+
+.admin-subida input {
+    margin: 10px 0;
+}
+
+.admin-subida button {
+    width: 100%;
+    padding: 10px;
+    background: #00bcd4;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+.admin-lista {
+    flex: 1;
+}
+
+.grid-peliculas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+}

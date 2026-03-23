@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login y Registro</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <h2>Iniciar Sesión</h2>
+
+        <form id="loginForm">
+            <input type="email" name="correo" placeholder="Correo"><br><br>
+            <input type="password" name="contrasena" placeholder="Contraseña"><br><br>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+
+        <p>¿No tienes cuenta? <button id="irRegistro">Registrarse</button></p>
+
+        <hr>
+
+        <div id="registroDiv">
+            <h2>Registro</h2>
+
+            <form id="registroForm">
+                <input type="text" name="nombre" placeholder="Nombre"><br><br>
+                <input type="text" name="apellido" placeholder="Apellido"><br><br>
+                <input type="email" name="correo" placeholder="Correo"><br><br>
+                <input type="password" name="contrasena" placeholder="Contraseña"><br><br>
+                <input type="password" name="confirmar" placeholder="Confirmar Contraseña"><br><br>
+                <input type="file" id="foto"><br><br>
+             
+                <button type="submit">Registrarse</button>
+
+                
+            </form>
+
+            <button id="volverLogin">Volver a iniciar sesión</button>
+        </div>
+
+
+    </div>
+    <div id="inicio" class="oculto inicio-app">
+       <div class="header">
+     
+
+        <div id="perfil"></div>
+
+            <button id="cerrarSesion">Cerrar sesión</button>
+        </div>
+    </div>
+
+    <div class="contenido">
+        
+        <div id="contenedorTarjetas"></div>
+    </div>
+</body>
+<script src="js/script.js"></script>
+
+</html>

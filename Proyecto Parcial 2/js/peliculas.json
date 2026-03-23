@@ -1,0 +1,29 @@
+[
+  { "titulo": "Avatar", "genero": "Fantasía", "img": "https://image.tmdb.org/t/p/w500/jRXYjXNq0Cs2TcJjLkki24MLp7u.jpg" },
+  { "titulo": "Titanic", "genero": "Romance", "img": "https://image.tmdb.org/t/p/w500/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg" },
+  { "titulo": "Matrix", "genero": "Acción", "img": "https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg" },
+  { "titulo": "Inception", "genero": "Ciencia ficción", "img": "https://image.tmdb.org/t/p/w500/edv5CZvWj09upOsy2Y6IwDhK8bt.jpg" },
+  { "titulo": "Interstellar", "genero": "Ciencia ficción", "img": "https://image.tmdb.org/t/p/w500/rAiYTfKGqDCRIIqo664sY9XZIvQ.jpg" },
+  { "titulo": "The Dark Knight", "genero": "Acción", "img": "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg" },
+  { "titulo": "Joker", "genero": "Drama", "img": "https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg" },
+  { "titulo": "Avengers: Endgame", "genero": "Acción", "img": "https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg" },
+  { "titulo": "Spider-Man: No Way Home", "genero": "Acción", "img": "https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg" },
+  { "titulo": "Doctor Strange", "genero": "Fantasía", "img": "https://image.tmdb.org/t/p/w500/uGBVj3bEbCoZbDjjl9wTxcygko1.jpg" },
+
+  { "titulo": "Frozen", "genero": "Animación", "img": "https://image.tmdb.org/t/p/w500/mbPrrbt8bSLcHSBCHnRclPlMZPl.jpg" },
+  { "titulo": "Coco", "genero": "Animación", "img": "https://image.tmdb.org/t/p/w500/gGEsBPAijhVUFoiNpgZXqRVWJt2.jpg" },
+  { "titulo": "Toy Story", "genero": "Animación", "img": "https://image.tmdb.org/t/p/w500/uXDfjJbdP4ijW5hWSBrPrlKpxab.jpg" },
+  { "titulo": "Shrek", "genero": "Animación", "img": "https://image.tmdb.org/t/p/w500/iB64vpL3dIObOtMZgX3RqdVdQDc.jpg" },
+
+  { "titulo": "La La Land", "genero": "Romance", "img": "https://image.tmdb.org/t/p/w500/uDO8zWDhfWwoFdKS4fzkUJt0Rf0.jpg" },
+  { "titulo": "The Notebook", "genero": "Romance", "img": "https://image.tmdb.org/t/p/w500/qom1SZSENdmHFNZBXbtJAU0WTlC.jpg" },
+
+  { "titulo": "It", "genero": "Terror", "img": "https://image.tmdb.org/t/p/w500/9E2y5Q7WlCVNEhP5GiVTjhEhx1o.jpg" },
+  { "titulo": "The Conjuring", "genero": "Terror", "img": "https://image.tmdb.org/t/p/w500/wVYREutTvI2tmxr6ujrHT704wGF.jpg" },
+
+  { "titulo": "Fast & Furious 7", "genero": "Acción", "img": "https://image.tmdb.org/t/p/w500/dCgm7efXDmiABSdWDHBDBx2jwmn.jpg" },
+  { "titulo": "John Wick", "genero": "Acción", "img": "https://image.tmdb.org/t/p/w500/fZPSd91yGE9fCcCe6OoQr6E3Bev.jpg" },
+
+  { "titulo": "Harry Potter", "genero": "Fantasía", "img": "https://image.tmdb.org/t/p/w500/uC6TTUhPpQCmgldGyYveKRAu8JN.jpg" },
+  { "titulo": "The Lord of the Rings", "genero": "Fantasía", "img": "https://image.tmdb.org/t/p/w500/56zTpe2xvaA4alU51sRWPoKPYZy.jpg" }
+]
