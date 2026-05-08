@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint Web</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="estilos/style.css">
+
+    <!-- ICONOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <canvas id="lienzo" class="lienzo" width="1000" height="800"></canvas>
+
+    <div class="barra">
+
+
+        <div class="panel">
+
+            <button id="btn_pincel">
+                <i class="fa-solid fa-paintbrush"></i>
+                Pincel
+            </button>
+
+            <button id="btn_linea">
+                <i class="fa-solid fa-slash"></i>
+                Línea
+            </button>
+
+            <button id="btn_cuadro">
+                <i class="fa-regular fa-square"></i>
+                Cuadrado
+            </button>
+
+            <button id="btn_circulo">
+                <i class="fa-regular fa-circle"></i>
+                Círculo
+            </button>
+
+            <button id="btn_estrella">
+                <i class="fa-solid fa-star"></i>
+                Estrella
+            </button>
+
+            <button id="btn_sticker">
+                <i class="fa-regular fa-image"></i>
+                Sticker
+            </button>
+
+            <button id="btn_borrador">
+                <i class="fa-solid fa-eraser"></i>
+                Borrador
+            </button>
+
+        </div>
+
+
+        <div class="panel">
+
+            <div>
+                <label>Color Línea</label>
+                <input type="color" id="colorLinea" value="#000000">
+            </div>
+
+            <div>
+                <label>Color Relleno</label>
+                <input type="color" id="colorRelleno" value="#ff9ecf">
+            </div>
+
+            <div>
+                <label>Grosor</label>
+                <input type="range" id="grosorLinea" min="1" max="50" value="5">
+            </div>
+
+            <div>
+                <label>Relleno</label>
+                <input type="checkbox" id="rellenoActivo" checked>
+            </div>
+
+        </div>
+
+
+        <div class="panel panel-secundario">
+
+            <button onclick="filtroBN()">
+                B/N
+            </button>
+
+            <button onclick="filtroSepia()">
+                Sepia
+            </button>
+
+            <button onclick="filtroNegativo()">
+                Negativo
+            </button>
+
+            <button onclick="filtroRojo()">
+                Rojo
+            </button>
+
+            <button onclick="filtroVerde()">
+                Verde
+            </button>
+
+            <button onclick="filtroAzul()">
+                Azul
+            </button>
+
+        </div>
+
+       
+
+        <div class="panel panel-secundario">
+
+            <button onclick="limpiarCanvas()">
+                <i class="fa-solid fa-trash"></i>
+                Limpiar
+            </button>
+
+            <button onclick="descargarImagen()">
+                <i class="fa-solid fa-download"></i>
+                Guardar
+            </button>
+
+            <button onclick="deshacer()">
+                Deshacer
+            </button>
+
+            <button onclick="rehacerDibujo()">
+                Rehacer
+            </button>
+
+        </div>
+
+  
+
+        <div class="panel">
+
+            <label>Seleccionar imagen</label>
+
+            <input type="file" id="inputImagen" accept="image/*">
+
+        </div>
+
+    </div>
+
+
+
+    <script type="module" src="js/script.js"></script>
+
+</body>
+
+</html>
